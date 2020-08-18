@@ -1,0 +1,26 @@
+spring:
+  security:
+    oauth2:
+      client:
+        registration:
+          custom:
+            client-id: ssoClient-1
+            client-secret: ssoClientSecret-1
+            scope: read,write
+            authorization-grant-type: authorization_code
+            redirect-uri: https:/
+        provider:
+          custom:
+            authorization-uri: https:
+            token-uri: https:
+            user-info-uri: https:/
+            user-name-attribute: preferred_username
+  thymeleaf:
+    cache: false
+    
+
+ 
+resourceserver:
+  api:
+    project:
+      url: http://localhost:8081/sso-resource-server/api/foos/      
