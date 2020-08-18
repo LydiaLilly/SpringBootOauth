@@ -8,8 +8,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.example.demo.resource.UserProfile;
 
-import org.springframework.security.core.userdetails.User;
-
 @Controller
 public class RestResource 
 {
