@@ -3,18 +3,20 @@ spring:
     oauth2:
       client:
         registration:
-          custom:
-            client-id: ssoClient-1
-            client-secret: ssoClientSecret-1
-            scope: read,write
+          custom-client:
+            client-id: 
+            client-secret: 
+            provider: custom
             authorization-grant-type: authorization_code
-            redirect-uri: 
+            client-authentication-method: basic
+            redirect-uri: http://localhost:8080/api/v1/test
         provider:
           custom:
             authorization-uri: 
             token-uri: 
             user-info-uri: 
-            jwk-set-uri:
+          
   thymeleaf:
     cache: false
+      
       
